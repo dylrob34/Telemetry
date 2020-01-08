@@ -27,6 +27,26 @@
             <Label Content="Tires" Grid.Column="6" />
         </Grid>
 
-        <Label Content="{Binding Path=ugh}" />
+        <Label Content="{Binding Ugh}" />
+        <ItemsControl ItemsSource="{Binding participants}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="{Binding Position}" Grid.Column="0" />
+                        <TextBlock Text="{Binding Name}" Grid.Column="1" />
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </StackPanel>
 </Window>

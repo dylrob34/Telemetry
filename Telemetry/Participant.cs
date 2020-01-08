@@ -7,36 +7,42 @@ namespace Telemetry
 {
     class Participant : INotifyPropertyChanged
     {
-        private Player m_player;
 
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
-        public Player player
+        private string _Name;
+        private short _Position;
+
+        public Participant(string name, short position)
+        {
+            Name = name;
+            Position = position;
+        }
+
+        public string Name
         {
             get
             {
-                return m_player;
+                return _Name;
             }
-
             set
             {
-                if (m_player.Equals(value))
-                    return;
-
-                m_player = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(player)));
+                _Name = value;
+                //fire event handler
             }
         }
 
-        public override string ToString()
+        public short Position
         {
-            return player.name + player.position;
+            get
+            {
+                return _Position;
+            }
+            set
+            {
+                _Position = value;
+                //fire event handler
+            }
         }
-    }
-
-    struct Player
-    {
-        public string name;
-        public short position;
     }
 }

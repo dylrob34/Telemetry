@@ -28,21 +28,43 @@ namespace Telemetry
         }
 
         public Test test;
-        public string ugh = "sdflkasjdflksajdf";
-        public List<Participant> participants;
-        public List<Participant> GetParticipants()
+        private string _ugh;
+        public string Ugh
         {
-            return null;
+            get
+            {
+                return _ugh;
+            }
+            set
+            {
+                _ugh = value;
+            }
+        }
+        private List<Participant> _participants;
+        public List<Participant> participants
+        {
+            get
+            {
+                return _participants;
+            }
+            set
+            {
+                _participants = value;
+            }
         }
 
         public AllContent()
         {
             participants = new List<Participant>();
             Thread thread = new Thread(startServer);
-            thread.Start();
+            //thread.Start();
 
+            participants.Add(new Participant("hello", 69));
+            participants.Add(new Participant("rbady sucks", 4));
+            participants.Add(new Participant("bro   ", 12));
+            participants.Add(new Participant("niaaaaa", 123));
             test = new Test("string test and number test: ", 34);
-            ugh = "fuck this";
+            Ugh = "well now this shit works";
         }
 
         public void startServer()
