@@ -49,3 +49,4 @@ D:\dev\Telemetry\Telemetry\obj\Debug\netcoreapp3.0\Telemetry.AssemblyInfoInputs.
 D:\dev\Telemetry\Telemetry\obj\Debug\netcoreapp3.0\Telemetry.AssemblyInfo.cs
 D:\dev\Telemetry\Telemetry\obj\Debug\netcoreapp3.0\Telemetry.dll
 D:\dev\Telemetry\Telemetry\obj\Debug\netcoreapp3.0\Telemetry.pdb
+D:\dev\Telemetry\Telemetry\obj\Debug\netcoreapp3.0\GeneratedInternalTypeHelper.g.cs
